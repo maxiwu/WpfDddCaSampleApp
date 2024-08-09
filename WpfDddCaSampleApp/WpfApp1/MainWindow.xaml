@@ -7,6 +7,21 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <ContentControl x:Name="TopRegion" Grid.Row="0" Grid.ColumnSpan="3"/>
+        <ContentControl x:Name="LeftRegion" Grid.Row="1" Grid.Column="0"/>
+        <ContentControl x:Name="CenterRegion" Grid.Row="1" Grid.Column="1"/>
+        <ContentControl x:Name="RightRegion" Grid.Row="1" Grid.Column="2"/>
+        <ContentControl x:Name="BottomRegion" Grid.Row="2" Grid.ColumnSpan="3"/>
     </Grid>
 </Window>
